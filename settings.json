@@ -1,16 +1,134 @@
 {
+  // -----   General   -----
+  "telemetry.telemetryLevel": "off",
+  "redhat.telemetry.enabled": false,
   "window.titleBarStyle": "custom",
   "json.schemaDownload.enable": true,
+  "security.workspace.trust.untrustedFiles": "newWindow",
+  "update.mode": "start",
+  // -----   Editor   -----
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.fontWeight": "400",
+  "editor.fontLigatures": true,
+  "editor.rulers": [
+    80,
+    120
+  ],
+  "editor.fontSize": 15,
+  "editor.tabSize": 2,
+  "editor.lineHeight": 22,
+  "editor.suggestSelection": "first",
+  "files.autoSave": "onWindowChange",
+  "editor.formatOnSave": true,
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.accessibilitySupport": "off",
+  "workbench.editor.labelFormat": "short",
+  "editor.parameterHints.enabled": true,
+  "editor.renderLineHighlight": "gutter",
+  "editor.cursorStyle": "line",
+  "editor.cursorBlinking": "smooth",
+  "editor.stickyScroll.enabled": true,
+  "editor.minimap.enabled": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.wordWrap": "on",
+  "tabnine.experimentalAutoImports": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
     "source.addMissingImports": "explicit"
+  },
+  //Exclude Files
+  "files.exclude": {
+    "**\/CVS": true,
+    "**\/.DS_Store": true,
+    "**\/.hg": true,
+    "**\/.svn": true,
+    "**\/.git": true,
+    "node_modules": true
+  },
+  //Git
+  "gitlens.codeLens.recentChange.enabled": false,
+  "gitlens.codeLens.enabled": false,
+  "git.enableSmartCommit": true,
+  "terminal.integrated.showExitAlert": false,
+  //Explorer
+  "explorer.confirmDelete": false,
+  "explorer.compactFolders": false,
+  "explorer.confirmDragAndDrop": false,
+  // -----   Terminal   -----
+  "terminal.integrated.env.linux": {},
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.env.windows": {},
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+  "terminal.integrated.lineHeight": 1.2,
+  "terminal.integrated.cursorStyle": "block",
+  "terminal.integrated.gpuAcceleration": "off",
+  // -----   Languages   -----
+  "cSpell.language": "en,pt",
+  "cSpell.userWords": [
+    "burocratic",
+    "dayjs",
+    "Fastify",
+    "graphiql",
+    "mercurius",
+    "paralleldrive",
+    "saira",
+    "Signup",
+    "stuukes",
+    "Stuuky",
+    "swiper",
+    "Swiper"
+  ],
+  "cSpell.enableFiletypes": [
+    "!asciidoc",
+    "!c",
+    "!cpp",
+    "!csharp",
+    "!go",
+    "!handlebars",
+    "!haskell",
+    "!jade",
+    "!java",
+    "!latex",
+    "!php",
+    "!pug",
+    "!python",
+    "!restructuredtext",
+    "!rust",
+    "!scala",
+    "!scss"
+  ],
+  "files.associations": {
+    ".sequelizerc": "javascript",
+    ".stylelintrc": "json",
+    "*.tsx": "typescriptreact",
+    ".env.*": "dotenv",
+    ".prettierrc": "json"
+  },
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "editor.unicodeHighlight.allowedCharacters": {
+    "😊": true
+  },
+  "[prisma]": {
+    "editor.formatOnSave": true
   },
   "eslint.validate": [
     "javascript",
     "javascriptreact",
     "graphql"
   ],
-  "typescript.suggest.autoImports": true,
+  //Typescript & Javascript
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "typescript.suggest.paths": false,
+  "javascript.suggest.paths": false,
+  // -----   UI   -----
+  "workbench.productIconTheme": "fluent-icons",
+  "workbench.colorTheme": "Sapphire (Dim)",
+  "workbench.iconTheme": "symbols",
+  "workbench.tree.indent": 15,
+  //Icons
   "material-icon-theme.folders.associations": {
     "adapters": "contract",
     "grpc": "pipe",
@@ -43,75 +161,15 @@
     "factories": "class",
     "repositories": "mappings"
   },
-  // =================== CONFIG: editor ===================
-  "editor.rulers": [
-    120,
-    120
-  ], // <== Linhas guias
-  "editor.fontSize": 15, // <== Tamanho da fonte
-  "editor.tabSize": 2, // <== Tamanho da tabulação
-  "editor.lineHeight": 21, // <== Altura da linha
-  "editor.fontFamily": "FiraCode Nerd Font", // <== Fonte
-  "editor.suggestSelection": "first", // <== Selecionar a primeira sugestão
-  "editor.fontLigatures": true, // <== Fonte com ligaduras
-  "editor.acceptSuggestionOnCommitCharacter": false, // <== Não aceitar sugestão ao digitar
-  "editor.accessibilitySupport": "off", // <== Desabilitar suporte a acessibilidade
-  "workbench.editor.labelFormat": "short", // <== Formato do nome do arquivo
-  "editor.parameterHints.enabled": true, // <== Desabilitar dicas de parâmetros
-  "editor.renderLineHighlight": "gutter", // <== Destacar linha atual
-  "editor.cursorStyle": "line",
-  "editor.cursorBlinking": "smooth",
-  "editor.stickyScroll.enabled": true,
-  "editor.formatOnSave": true,
-  "editor.minimap.enabled": true,
-  "editor.bracketPairColorization.enabled": true,
-  "editor.guides.bracketPairs": "active",
-  "editor.wordWrap": "on",
-  "workbench.productIconTheme": "fluent-icons",
-  "workbench.tree.indent": 15,
-  "terminal.integrated.env.linux": {},
-  "terminal.integrated.defaultProfile.windows": "Git Bash",
-  "terminal.integrated.env.windows": {},
-  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
-  "terminal.integrated.lineHeight": 1.2,
-  "terminal.integrated.cursorStyle": "block",
-  "javascript.suggest.autoImports": true,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  // =================== CONFIG: explorador de arquivos ===================
-  "explorer.confirmDelete": false,
-  "explorer.compactFolders": false,
-  "explorer.confirmDragAndDrop": false,
-  "tabnine.experimentalAutoImports": true,
-  "cSpell.userWords": [
-    "burocratic",
-    "dayjs",
-    "Fastify",
-    "graphiql",
-    "mercurius",
-    "paralleldrive",
-    "saira",
-    "Signup",
-    "stuukes",
-    "Stuuky",
-    "swiper",
-    "Swiper"
-  ],
-  "cSpell.language": "en,pt",
-  "workbench.colorTheme": "Celestial",
-  "files.associations": {
-    "*.css": "css"
+  "material-icon-theme.languages.associations": {
+    "dotenv": "tune"
   },
-  "[python]": {
-    "editor.formatOnType": true
+  "material-icon-theme.files.associations": {
+    "tsconfig.json": "tune",
+    "*.webpack.js": "webpack",
+    "*.proto": "3d",
+    "ormconfig.json": "database"
   },
-  "editor.unicodeHighlight.allowedCharacters": {
-    "😊": true
-  },
-  "[prisma]": {
-    "editor.formatOnSave": true
-  },
-  "workbench.iconTheme": "material-icon-theme",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "files.autoSave": "onWindowChange",
-  "redhat.telemetry.enabled": true,
+  "material-icon-theme.activeIconPack": "nest",
+  "symbols.hidesExplorerArrows": false
 }
